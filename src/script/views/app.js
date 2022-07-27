@@ -8,7 +8,6 @@ class App {
     this._content = content;
     this._header = header;
     this._footer = footer;
-
     this._initialComponent();
   }
 
