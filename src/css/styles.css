@@ -1,0 +1,93 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+#all-categories {
+  border: 3px solid black;
+}
+
+#all-categories__h2 {
+  font-weight: bold;
+  font-size: 1.5em;
+}
+
+#all-categories__h2 > h2 {
+  padding: 0.2em 0.5em;
+  border: 3px solid black;
+  border-radius: 0.5em;
+}
+
+.image-container {
+  border: 2px solid black;
+  background-color: white;
+  box-shadow: 0 10px black;
+  border-radius: 0.5em;
+}
+
+.image-container:active {
+  box-shadow: 0 0 black;
+  transform: translateY(4px);
+}
+
+.image-container img:hover {
+  filter: opacity(0.5);
+}
+
+.image-container:hover::before {
+  content: attr(data-category);
+  z-index: 10;
+  position: absolute;
+  background-color: rgb(253 224 71);
+  border-top-left-radius: 0.5em;
+  border-bottom-right-radius: 0.5em;
+  padding: 0.3em 0.5em;
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+.jumbotron-left,
+.jumbotron-right,
+#ingredients,
+#instructions,
+#youtube-detail,
+.footer {
+  border: 3px solid black;
+  border-radius: 1em;
+  background-color: rgba(52, 211, 153);
+  background-clip: border-box !important;
+}
+
+.jumbotron-left > img {
+  width: 100%;
+  height: 60vh;
+  object-fit: cover;
+  border-radius: 1em;
+}
+
+.jumbotron-right__button > a,
+.jumbotron-right__header > h2,
+.jumbotron-right__content,
+#ingredients h3,
+#instructions h3,
+#youtube-detail h3,
+#breadcrumb,
+.category-nav {
+  border: 2px solid black;
+  border-radius: 1em;
+}
+
+.jumbotron-right__button > a,
+.category-nav {
+  box-shadow: 0 5px black;
+}
+
+.jumbotron-right__button > a:active,
+.category-nav:active {
+  box-shadow: 0 0px black;
+  transform: translateY(4px);
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+}
